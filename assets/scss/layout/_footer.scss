@@ -1,0 +1,57 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+.footer {
+    padding-block: 4rem;
+    background-color: $clr-blue;
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &-logo {
+        margin-bottom: 3rem;
+    }
+    a {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &-menu {
+        &__main {
+            list-style: none;
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(1, 1fr);
+            text-align: center;
+            .menu-item {
+                @include mq(tablet, max) {
+                    padding-block: 0.2rem;
+                }
+                @include mq(tablet) {
+                    padding-inline: 1rem;
+                }
+                a {
+                    font-size: 1.8rem;
+                    font-family: $f-heading;
+                    font-weight: 400;
+                    color: $clr-white;
+                }
+            }
+        }
+        &--contact {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        &__item {
+            padding-bottom: 1rem;
+            h5, a {
+                font-size: 1.8rem;
+                font-family: $f-heading;
+                font-weight: 700;
+                color: $clr-white;
+            }
+        }
+    }
+}

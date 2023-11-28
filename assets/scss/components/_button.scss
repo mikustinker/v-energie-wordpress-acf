@@ -1,0 +1,27 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.btn {
+    display: block;
+    font-size: 2rem;
+    padding: 1.7rem 3.3rem;
+    color: $clr-white;
+    border-radius: 5rem;
+    width: fit-content;
+    background-color: $clr-blue;
+    transition: 0.3s;
+    text-align: center;
+    font-weight: 700;
+    font-family: $f-heading;
+    @include mq(tablet, max){
+        width: 100%;
+        font-size: 1.6rem;
+    }
+    &--main {
+        background-color: $clr-main;
+        &:hover {
+            color: $clr-blue;
+        }
+    }
+}

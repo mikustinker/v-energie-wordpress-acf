@@ -1,0 +1,10 @@
+.carousel {
+    .container {
+        max-width: 113.6rem;
+        background-color: $clr-white;
+        padding: 2rem 3.2rem;
+        @include mq(tablet) {
+            padding: 4rem 8rem;
+        }
+    }
+}

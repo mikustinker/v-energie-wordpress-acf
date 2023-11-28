@@ -1,0 +1,175 @@
+.media-content {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 113.6rem;
+        background-color: $clr-white;
+        padding-block: 4rem;
+        padding-inline: 3.2rem;
+        @include mq(tablet) {
+            padding-inline: 8rem;
+            padding-block: 7rem;
+        }
+        @include mq(tablet, max) {
+            flex-direction: column;
+        }
+        @include mq(tablet) {
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        &.image--right {
+            flex-direction: row-reverse;
+            @include mq(tablet, max) {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+    &__media {
+        flex-shrink: 0;
+        @include mq(tablet, max) {
+            margin-top: 4rem;
+        }
+        @include mq(tablet) {
+            width: 45%;
+        }
+        img {
+            border-radius: 5px;
+            width: 100%;
+        }
+        video {
+            border-radius: 5rem;
+            width: 100%;
+            @include mq(tablet, max) {
+                margin-bottom: 2rem;
+            }
+            &:hover {
+                border-radius: 0;
+            }
+        }
+    }
+    &__content {
+        @include mq(tablet) {
+            width: 45%;
+        }
+        &__title {
+            margin-bottom: 2.5rem;
+            span {
+                color: $clr-main;
+            }
+        }
+        &__cta {
+            margin-top: 2.4rem;
+            @include mq(tablet) {
+                margin-top: 4.8rem;
+            }
+        }
+    }
+    .image--left {
+        .media-content__media {
+            @include mq(tablet, max) {
+                margin-top: 0;
+            }
+        }
+    }
+    &.style--gray {
+        .container {
+            background-color: #F6F4F3;
+        }
+    }
+    &.style--step {
+        .step-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            &__circle {
+                position: relative;
+                margin-right: 3rem;
+                width: 2.4rem;
+                height: 2.4rem;
+                background-color: $clr-main;
+                border-radius: 50%;
+                flex-shrink: 0;
+            }
+            &__number {
+                width: 3rem;
+                text-align: center;
+                margin-right: 3rem;
+                font-size: 4.7rem;
+            }
+            &__title {
+                max-width: 22rem;
+                line-height: 2rem
+            }
+            &:not(:last-child) {
+                .step-item__circle {
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        top: 50%;
+                        left: calc(50% - 1px);
+                        width: 2px;
+                        height: 7rem;
+                        background-color: $clr-main;
+                    }
+                }
+            }
+            &:last-child {
+                .step-item__circle {
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        top: 40%;
+                        left: 50%;
+                        width: 1.1rem;
+                        height: 0.7rem;
+                        border: 2px solid;
+                        border-color: transparent transparent $clr-white $clr-white;
+                        transform: translate(-50%, -50%) rotate(-45deg);
+                    }
+                }
+                .step-item__number {
+                    color: $clr-main;
+                }
+                .step-item__title {
+                    color: $clr-main;
+                    font-size: 2.4rem;
+                    line-height: 2.7rem;
+                }
+            }
+        }
+        .media-content__media {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: $clr-blue;
+            border-radius: 0.5rem;
+            img {
+                width: 12.5rem;
+                height: 12.5rem;
+                object-fit: cover;
+                border-radius: 50%;
+                margin-top: -4.2rem;
+                @include mq(tablet) {
+                    width: 18rem;
+                    height: 18rem;
+                }
+            }
+            &__caption {
+                margin-top: 2rem;
+                padding: 0 5.5rem;
+                color: $clr-white
+            }
+            &__cta {
+                margin-top: 2rem;
+                margin-bottom: 5rem;
+                @include mq(tablet, max) {
+                    margin-bottom: 3rem;
+                    width: fit-content;
+                }
+            }
+        }
+        
+    }
+}

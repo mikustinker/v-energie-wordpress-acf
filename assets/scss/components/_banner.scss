@@ -1,0 +1,95 @@
+.banner {
+    padding-top: 13rem;
+    padding-bottom: 5rem;
+    background-size: cover;
+    .container {
+        @include mq(tablet) {
+            display: flex;
+        }
+    }
+    &-content {
+        width: 100%;
+        @include mq(tablet) {
+            margin-right: 3rem;
+        }
+        img {
+            margin: 0;
+            padding: 0.8rem 1rem;
+            background-color: $clr-main;
+            border-radius: 0.5rem;
+            margin-bottom: 1.6rem;
+            @include mq(tablet, max) {
+                max-width: 13rem;
+            }
+            @include mq(tablet) {
+                margin-bottom: 2.4rem;
+                padding: 1.7rem  2.7rem;
+            }
+        }
+        h1, h2, h3, h4, h5, h6, p {
+            color: $clr-white;
+            margin-bottom: 2rem;
+            @include mq(tablet) {
+                margin-bottom: 3rem;
+            }
+        }
+        p {
+            @include mq(tablet, max) {
+                font-size: 1.2rem;
+            }
+        }
+    }
+    &-form {
+        width: 100%;
+        @include mq(tablet) {
+            margin-top: 10rem;
+        }
+        form {
+            flex-shrink: 0;
+            max-width: 36.8rem;
+            padding: 3.2rem;
+            width: 100%;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 1px 1px 3px -1px black;
+            @include mq(tablet, max) {
+                margin: auto;
+            }
+        }
+        .wpcf7 {
+            display: flex;
+        }
+        .item {
+            margin-bottom: 1.7rem;
+        }
+        .item-name p {
+            display: flex;
+            gap: 0.4rem;
+        }
+        input {
+            margin-top: 0.5rem;
+            padding: 1rem 1rem;
+            width: 100%;
+            border-radius: 0.5rem;
+            border: 1px solid #c6c2be;
+            font-family: $f-heading;
+        }
+        input::placeholder {
+            color: #c6c2be;
+        }
+        
+        .banner-content {
+            width: 100%;
+            padding-right: 3rem
+        }
+        .submit input {
+            outline: none;
+            border: none;
+            border-radius: 5rem;
+            padding: 1.7rem;
+        }
+        .wpcf7-spinner {
+            position: absolute;
+        }
+    }
+}
