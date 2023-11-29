@@ -9,20 +9,20 @@ $address = get_field( 'address', 'options' );
 
 <footer class="footer">
     <div class="container">
-        <div class="footer-logo">
+        <div class="footer-logo a-up">
 			<?php if ( $image ) : ?>
 			<a href="/">
 				<img src="<?php echo esc_attr( $image['url'] ); ?>" alt="footer logo">
 			</a>
 			<?php endif; ?>
 		</div>
-        <div class="footer-menus">
+        <div class="footer-menus a-up a-delay-1">
             <div class="footer-menu footer-menu--contact">
                 <div class="footer-menu__item"><h5><?php echo esc_html( $address ); ?></h5></div>
                 <div class="footer-menu__item"><a href="mailto:<?php echo esc_attr( $email ); ?>"><?php echo esc_html( $email ); ?></a></div>
                 <div class="footer-menu__item"><a href="tel:<?php echo esc_attr( $phone ); ?>"><?php echo esc_html( $phone ); ?></a></div>
             </div>
-            <div class="footer-menu footer-menu--second">
+            <div class="footer-menu footer-menu--second a-up a-delay-2">
                 <?php
                 wp_nav_menu(
                     array(

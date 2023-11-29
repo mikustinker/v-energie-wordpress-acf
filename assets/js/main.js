@@ -195,6 +195,24 @@
     },
   };
 
+  var playButton = document.getElementById("play_button");
+  var video = document.getElementById("video");
+  // Event listener for the play/pause button
+  function videoPlay() {
+    if (video.paused == true) {
+      video.play();
+      $('.media-content__media__video').removeClass('video-stop');
+    } else {
+      video.pause();
+      $('.media-content__media__video').addClass('video-stop');
+    }
+  }
+  playButton.addEventListener("click", function() {
+    videoPlay();
+  });
+  video.addEventListener("click", function() {
+    videoPlay();
+  });
 
   // Initialize Theme
   theme.init();

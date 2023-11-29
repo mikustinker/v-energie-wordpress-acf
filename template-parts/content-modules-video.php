@@ -13,7 +13,7 @@ if ( $image ) {
 }
 ?>
 <?php if ( $video ) : ?>
-	<video loop playsinline muted preload="metadata" src="<?php echo $video; ?>">
+	<video loop playsinline muted preload="metadata" src="<?php echo $video; ?>" id="video">
 		<source src="<?php echo $video; ?>" type="video/mp4">
 	</video>
 <?php elseif ( $image ) : ?>

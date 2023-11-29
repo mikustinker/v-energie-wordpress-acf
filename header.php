@@ -21,14 +21,14 @@ $phone = get_field( 'phone', 'options' );
 
 <header class="header">
 	<div class="container">
-		<div class="header-logo">
+		<div class="header-logo a-up">
 			<?php if ( $image ) : ?>
 			<a href="/">
 				<img src="<?php echo esc_attr( $image['url'] ); ?>" alt="header logo">
 			</a>
 			<?php endif; ?>
 		</div>
-		<div class="header-phone">
+		<div class="header-phone a-up a-delay-1">
 			<a href="tel:<?php echo esc_attr( $phone ); ?>"><?php echo esc_html( $phone ); ?></a>
 		</div>
 	</div>
